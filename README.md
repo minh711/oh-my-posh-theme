@@ -1,2 +1,2 @@
-# oh-my-posh-them
+# oh-my-posh theme
 My customized theme for oh-my-posh
