@@ -1,10 +1,11 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
-    "git": "#c398f8",
-    "path": "#e3f88f",
-    "python": "#a0a2ff",
-    "text": "#494D64"
+    "os": "#4BA3FF",
+    "git": "#FF7043",
+    "path": "#B37DD6",
+    "python": "#FFE066",
+    "text": "#6C7089"
   },
   "blocks": [
     {
@@ -12,25 +13,48 @@
       "alignment": "left",
       "segments": [
         {
-          "template": " \ue235 {{ .Venv }}",
-          "foreground": "p:text",
+          "foreground": "p:os",
+          "properties": {
+            "alpine": "\uf300",
+            "arch": "\uf303",
+            "centos": "\uf304",
+            "debian": "\uf306",
+            "elementary": "\uf309",
+            "fedora": "\uf30a",
+            "gentoo": "\uf30d",
+            "linux": "\ue712",
+            "macos": "\uf179 ",
+            "manjaro": "\uf312",
+            "mint": "\uf30f",
+            "opensuse": "\uf314",
+            "raspbian": "\uf315",
+            "ubuntu": "\uf31b ",
+            "windows": "\ue62a ",
+            "wsl": "\ue712"
+          },
+          "style": "plain",
+          "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+          "type": "os"
+        },
+        {
+          "template": "{{ .Venv }} ",
+          "foreground": "p:python",
           "powerline_symbol": "\ue0b0",
-          "background": "p:python",
           "type": "python",
-          "style": "powerline"
+          "style": "plain"
         },
         {
           "properties": {
-            "folder_icon": "..\ue5fe..",
+            "folder_separator_icon": "/",
             "home_icon": "~",
-            "style": "agnoster_short"
+            "max_depth": 2,
+            "style": "letter"
           },
-          "template": " {{ .Path }}",
-          "foreground": "p:text",
+          "template": "\ue5fe {{ .Path }} ",
+          "foreground": "p:path",
           "powerline_symbol": "\ue0b0",
-          "background": "p:path",
           "type": "path",
-          "style": "powerline"
+          "style": "plain"
         },
         {
           "properties": {
@@ -45,16 +69,21 @@
             "revert_icon": "\uf0e2 ",
             "tag_icon": "\uf412 "
           },
-          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf0c7 {{ .StashCount }}{{ end }}",
-          "foreground": "p:text",
+          "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf0c7 {{ .StashCount }}{{ end }} ",
+          "foreground": "p:git",
           "powerline_symbol": "\ue0b0",
-          "background": "p:git",
           "type": "git",
-          "style": "powerline"
+          "style": "plain"
+        },
+        {
+          "style": "plain",
+          "foreground": "p:text",
+          "template": "\uf105",
+          "type": "text"
         }
       ]
     }
   ],
-  "version": 3,
+  "version": 4,
   "final_space": true
 }
