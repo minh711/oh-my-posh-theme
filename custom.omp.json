@@ -4,7 +4,7 @@
     "os": "#4BA3FF",
     "git": "#FF7043",
     "path": "#B37DD6",
-    "python": "#FFE066",
+    "python": "#775fff",
     "text": "#6C7089"
   },
   "blocks": [
@@ -37,7 +37,7 @@
           "type": "os"
         },
         {
-          "template": "{{ .Venv }} ",
+          "template": "(\ue73c venv: {{ .Venv }}) ",
           "foreground": "p:python",
           "powerline_symbol": "\ue0b0",
           "type": "python",
@@ -84,6 +84,6 @@
       ]
     }
   ],
-  "version": 4,
+  "version": 5,
   "final_space": true
 }
