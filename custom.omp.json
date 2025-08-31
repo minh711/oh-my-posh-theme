@@ -2,8 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
     "os": "#4BA3FF",
-    "git": "#FF7043",
-    "path": "#B37DD6",
+    "git": "#43fff6",
+    "path": "#9ed67d",
     "python": "#775fff",
     "text": "#6C7089"
   },
@@ -84,6 +84,6 @@
       ]
     }
   ],
-  "version": 5,
+  "version": 6,
   "final_space": true
 }
