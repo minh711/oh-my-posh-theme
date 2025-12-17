@@ -33,4 +33,10 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/custom.omp.json" | Invoke-E
 
 ### On Linux
 
-(add later)
+In my case, I add this to the end of `~/.bashrc`:
+
+```bash
+export PATH="$PATH:$HOME/.local/bin"
+
+eval "$(oh-my-posh init bash --config ~/custom.omp.json)"
+```
