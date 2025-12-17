@@ -38,5 +38,5 @@ In my case, I add this to the end of `~/.bashrc`:
 ```bash
 export PATH="$PATH:$HOME/.local/bin"
 
-eval "$(oh-my-posh init bash --config ~/custom.omp.json)"
+eval "$(oh-my-posh init bash --config /home/<username>/.cache/oh-my-posh/themes/custom.omp.json)"
 ```
