@@ -1,9 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
-    "os": "#4BA3FF",
+    "os": "#4bff4e",
     "git": "#43fff6",
-    "path": "#9ed67d",
+    "path": "#feee5b",
     "python": "#775fff",
     "text": "#6C7089"
   },
@@ -33,7 +33,7 @@
             "wsl": "\ue712"
           },
           "style": "plain",
-          "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
           "type": "os"
         },
         {
@@ -84,6 +84,6 @@
       ]
     }
   ],
-  "version": 6,
+  "version": 7,
   "final_space": true
 }
