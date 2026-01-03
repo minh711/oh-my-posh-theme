@@ -1,17 +1,13 @@
 # oh-my-posh theme
+
 My customized theme for oh-my-posh
 
 ## Features
 
-> **NOTE**: The styles and colors are not updated
-
-1. Remove uneccessary segments, just keep **path** and **git**
-
-![image](https://github.com/user-attachments/assets/44044fb3-456a-4abe-8b48-18a69be34b53)
-
+1. Remove uneccessary segments
 2. Display `venv` name
 
-![image](https://github.com/user-attachments/assets/0baf088a-acb1-486b-9536-8f4af47adc3c)
+<img width="480" height="196" alt="image" src="https://github.com/user-attachments/assets/8b611d07-419d-4819-861f-b96d7606149b" />
 
 ## Installation
 
