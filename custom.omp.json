@@ -1,18 +1,18 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
-    "os": "#4BA3FF",
-    "git": "#43fff6",
-    "path": "#9ed67d",
-    "python": "#775fff",
-    "text": "#6C7089"
+    "python": "#cba6f7",
+    "os": "#f9e2af",
+    "path": "#a6e3a1",
+    "git": "#fab387",
+    "text": "#cdd6f4"
   },
   "blocks": [
     {
       "type": "rprompt",
       "segments": [
         {
-          "foreground": "#f0b1fa",
+          "foreground": "#b4befe",
           "options": {
             "time_format": "15:04:05"
           },
