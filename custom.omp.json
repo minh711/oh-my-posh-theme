@@ -1,23 +1,36 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
-    "python": "#cba6f7",
-    "os": "#f9e2af",
-    "path": "#a6e3a1",
-    "git": "#fab387",
-    "text": "#cdd6f4"
+    "python_bg": "#cba6f7",
+    "python": "#1e1e2e",
+
+    "os_bg": "#cdd6f4",
+    "os": "#1e1e2e",
+
+    "path_bg": "#a6e3a1",
+    "path": "#1e1e2e",
+
+    "git_bg": "#fab387",
+    "git": "#1e1e2e",
+
+    "text": "#cdd6f4",
+
+    "time": "#1e1e2e",
+    "time_bg": "#cdd6f4"
   },
   "blocks": [
     {
       "type": "rprompt",
       "segments": [
         {
-          "foreground": "#b4befe",
+          "foreground": "p:time",
           "options": {
             "time_format": "15:04:05"
           },
-          "style": "plain",
-          "template": " {{ .CurrentDate | date .Format }} ",
+          "style": "diamond",
+          "leading_diamond": "\ue0b2",
+          "background": "p:time_bg",
+          "template": " <b>{{ .CurrentDate | date .Format }}</b> ",
           "type": "time"
         }
       ]
@@ -28,7 +41,7 @@
       "segments": [
         {
           "foreground": "p:os",
-          "properties": {
+          "options": {
             "alpine": "\uf300",
             "arch": "\uf303",
             "centos": "\uf304",
@@ -43,35 +56,40 @@
             "opensuse": "\uf314",
             "raspbian": "\uf315",
             "ubuntu": "\uf31b ",
-            "windows": "\ue62a ",
-            "wsl": "\ue712"
+            "windows": "\ue62a "
           },
-          "style": "plain",
-          "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+          "style": "diamond",
+          "trailing_diamond": "\ue0b0",
+          "background": "p:os_bg",
+          "template": " <b>{{ if .WSL }}WSL at {{ end }}{{.Icon}}</b> ",
           "type": "os"
         },
         {
-          "template": "(\ue73c venv: {{ .Venv }}) ",
+          "template": " <b>(\ue73c venv: {{ .Venv }})</b> ",
           "foreground": "p:python",
           "powerline_symbol": "\ue0b0",
           "type": "python",
-          "style": "plain"
+          "style": "diamond",
+          "trailing_diamond": "\ue0b0",
+          "background": "p:python_bg"
         },
         {
-          "properties": {
+          "options": {
             "folder_separator_icon": "/",
             "home_icon": "~",
             "max_depth": 2,
-            "style": "letter"
+            "style": "agnoster_short"
           },
-          "template": "\ue5fe {{ .Path }} ",
+          "template": " <b>\ue5fe {{ .Path }}</b> ",
           "foreground": "p:path",
           "powerline_symbol": "\ue0b0",
           "type": "path",
-          "style": "plain"
+          "style": "diamond",
+          "trailing_diamond": "\ue0b0",
+          "background": "p:path_bg"
         },
         {
-          "properties": {
+          "options": {
             "branch_icon": "\ue725 ",
             "cherry_pick_icon": "\ue29b ",
             "commit_icon": "\uf417 ",
@@ -83,21 +101,23 @@
             "revert_icon": "\uf0e2 ",
             "tag_icon": "\uf412 "
           },
-          "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf0c7 {{ .StashCount }}{{ end }} ",
+          "template": " <b>{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf0c7 {{ .StashCount }}{{ end }}</b> ",
           "foreground": "p:git",
           "powerline_symbol": "\ue0b0",
           "type": "git",
-          "style": "plain"
+          "style": "diamond",
+          "trailing_diamond": "\ue0b0",
+          "background": "p:git_bg"
         },
         {
           "style": "plain",
           "foreground": "p:text",
-          "template": "\uf105",
+          "template": "",
           "type": "text"
         }
       ]
     }
   ],
-  "version": 7,
+  "version": 8,
   "final_space": true
 }
