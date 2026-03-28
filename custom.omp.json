@@ -4,7 +4,7 @@
     "python_bg": "#cba6f7",
     "python": "#1e1e2e",
 
-    "os_bg": "#cdd6f4",
+    "os_bg": "#209fb5",
     "os": "#1e1e2e",
 
     "path_bg": "#a6e3a1",
@@ -78,7 +78,9 @@
             "folder_separator_icon": "/",
             "home_icon": "~",
             "max_depth": 2,
-            "style": "agnoster_short"
+            "style": "agnoster_short",
+            "folder_format": "%.4s",
+            "right_format": "%.4s"
           },
           "template": " <b>\ue5fe {{ .Path }}</b> ",
           "foreground": "p:path",
